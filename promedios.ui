@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>605</width>
+    <height>466</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>561</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>fondo.jpeg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>581</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,100);
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>171</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>si.jpeg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>40</y>
+      <width>391</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,0)</string>
+    </property>
+    <widget class="QWidget" name="page_database">
+     <widget class="QTableWidget" name="tabla_notas">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>391</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget{
+background-color:rgba(255,255,255);
+gridline-color:black;
+color: rgb(0,0,0);
+color: #000000;
+}
+QHeaderView::section{
+background-color: #b059b1;
+border: 1 px solid rgb(0,0,0);
+font-size:13px;
+}
+</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>ALUMNO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NOTA 1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NOTA 2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NOTA 3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PROMEDIO</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="bt_refrescar">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>370</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(20,47,78,219), stop:1 rgba(85,98,112,226));
+}
+QPushButton:hover{
+
+color:rgba(255,255,255,210);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+
+
+}</string>
+      </property>
+      <property name="text">
+       <string>REFRESCAR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>nueva-base-de-datos.png</normaloff>nueva-base-de-datos.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_promedios">
+     <widget class="QTableWidget" name="tabla_promedios">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>201</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget{
+background-color:rgba(255,255,255);
+gridline-color:black;
+color: rgb(0,0,0);
+color: #000000;
+}
+QHeaderView::section{
+background-color: #b059b1;
+border: 1  px solid rgb(0,0,0);
+font-size:15px;
+}
+</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>ALUMNOS</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PROMEDIO</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="bt_reprobados">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>360</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(20,47,78,219), stop:1 rgba(85,98,112,226));
+}
+QPushButton:hover{
+
+color:rgba(255,255,255,210);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+
+
+}</string>
+      </property>
+      <property name="text">
+       <string>REPROBADOS</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>nueva-base-de-datos.png</normaloff>nueva-base-de-datos.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_aprobados">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>360</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(20,47,78,219), stop:1 rgba(85,98,112,226));
+}
+QPushButton:hover{
+
+color:rgba(255,255,255,210);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+
+
+}</string>
+      </property>
+      <property name="text">
+       <string>APROBADOS</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>nueva-base-de-datos.png</normaloff>nueva-base-de-datos.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="bt_datos">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(20,47,78,219), stop:1 rgba(85,98,112,226));
+}
+QPushButton:hover{
+
+color:rgba(255,255,255,210);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>       Alumnos 
+Notas y Promedios</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>nueva-base-de-datos.png</normaloff>nueva-base-de-datos.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_promedio">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>300</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(20,47,78,219), stop:1 rgba(85,98,112,226));
+}
+QPushButton:hover{
+
+color:rgba(255,255,255,210);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Aprobados y 
+Reprobados</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>nueva-base-de-datos.png</normaloff>nueva-base-de-datos.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_salir">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:qlineargradient(spread:pad,x1:0,y1:0.505682, x2:1, y2:0.477 ,stop:0 rgba(72,61,139,219), stop:1 rgba(0,0,139,225));
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color : rgba(0,0,0,0);
+}
+QPushButton:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+}
+QPushButton:pressed{
+padding-left:5px;
+padding-top:5px;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Salir</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>cerrar-sesion.png</normaloff>cerrar-sesion.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_volver">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:qlineargradient(spread:pad,x1:0,y1:0.505682, x2:1, y2:0.477 ,stop:0 rgba(72,61,139,219), stop:1 rgba(0,0,139,225));
+color:rgba(255,255,255,210);
+border-radius:15px;
+background-color : rgba(0,0,0,0);
+}
+QPushButton:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682 , x2:1 , y2:0.477,stop:0 rgba(123, 104, 238,230), stop:1 rgba(85,98,112,226));
+}
+QPushButton:pressed{
+padding-left:5px;
+padding-top:5px;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Volver</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>girar-a-la-izquierda.png</normaloff>girar-a-la-izquierda.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_2</zorder>
+   <zorder>stackedWidget</zorder>
+   <zorder>bt_datos</zorder>
+   <zorder>bt_promedio</zorder>
+   <zorder>bt_salir</zorder>
+   <zorder>bt_volver</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
